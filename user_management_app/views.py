@@ -1124,3 +1124,13 @@ class UsersWithWithdrawalsAPIView(APIView):
             {"success": True, "response": {"users": serializer.data}},
             status=status.HTTP_200_OK
         )
+
+class UserBlock(APIView):
+    permission_classes = [AllowAny]
+    def post(self, request, id):
+        user = User.objects.filter(id=id).first()
+        if not user:
+            return Response({'success':False, 'response':{'message': 'User not found!'}}, status=status.HTTP_400_BAD_REQUEST)
+        user.is_active=False
+        user.save()
+        return Response({'success': True, 'response':{'message': 'Player Blocked Successfully!'}}, status=status.HTTP_200_OK)

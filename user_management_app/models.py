@@ -112,3 +112,5 @@ class FriendList(BaseModelWithCreatedInfo):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='friendlist_user')
     friends = models.ManyToManyField(User, blank=True, related_name='friendlist_friends')
     # rejected_user = models.ManyToManyField(User, blank=True, related_name='friendlist_friends')
+    
+    
