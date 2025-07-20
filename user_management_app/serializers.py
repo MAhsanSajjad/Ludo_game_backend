@@ -69,3 +69,4 @@ class GameWinnerSerializer(serializers.ModelSerializer):
         fields = ['id', 'user', 'description']
         
         
+        
