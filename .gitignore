@@ -1,0 +1,46 @@
+# Virtual environment
+/venv
+
+# Environment variables file
+.env/
+.env
+.venv/
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Specific app cache directories (optional if __pycache__/ already covers them)
+user_management_app/__pycache__/
+driving_license/__pycache__/
+course_management_app/__pycache__/
+admin_dashboard/__pycache__/
+utils_app/__pycache__/
+
+# SQLite database file
+db.sqlite3
+
+# Uploaded media files
+media/
+
+# Django specific
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+
+# Backup and miscellaneous
+*.swp
+*.swo
+*.bak
+*.tmp
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+creds/gearup-f9aa6-firebase-adminsdk-tfvhx-345813eaed.json
+cred/canadianludo-71730-firebase-adminsdk-a886y-cdcf9f7b56.json
+.cred/canadianludo-71730-firebase-adminsdk-a886y-cdcf9f7b56.json
+
