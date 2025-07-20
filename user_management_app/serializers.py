@@ -55,3 +55,9 @@ class WithDrawDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'phone_number', 'username', 'email', 'logo']
+        
+        
+class BlockedUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id', 'name', 'role']
