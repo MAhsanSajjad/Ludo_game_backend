@@ -67,3 +67,5 @@ class GameWinnerSerializer(serializers.ModelSerializer):
     class Meta:
         model = GameWinnser
         fields = ['id', 'user', 'description']
+        
+        
