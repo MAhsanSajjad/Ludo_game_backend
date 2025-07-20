@@ -113,4 +113,6 @@ class FriendList(BaseModelWithCreatedInfo):
     friends = models.ManyToManyField(User, blank=True, related_name='friendlist_friends')
     # rejected_user = models.ManyToManyField(User, blank=True, related_name='friendlist_friends')
     
-    
+class GameWinnser(BaseModelWithCreatedInfo):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
+    description = models.TextField(null=True, blank=True)

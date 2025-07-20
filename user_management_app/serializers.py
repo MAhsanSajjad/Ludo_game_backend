@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from user_management_app.models import User, TransactionHistroy, GameSetting, FriendRequest, FriendList
+from user_management_app.models import User, TransactionHistroy, GameSetting, FriendRequest, FriendList, GameWinnser
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -61,3 +61,9 @@ class BlockedUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'name', 'role']
+        
+        
+class GameWinnerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GameWinnser
+        fields = ['id', 'user', 'description']
